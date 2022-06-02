@@ -7,7 +7,7 @@ class InvestmentsController < ApplicationController
     if @investment.save
       render :show, status: :created, location: @investment
     else
-      format.json { render json: @investment.errors, status: :unprocessable_entity }
+      render json: @investment.errors, status: :unprocessable_entity
     end
   end
 
@@ -15,6 +15,6 @@ class InvestmentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def investment_params
-      params.require(:investment, :amount, :email, :campaign_id)
+      params.require(:investment).permit(:amount, :email, :campaign_id)
     end
 end

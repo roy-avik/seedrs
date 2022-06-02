@@ -1,14 +1,15 @@
 class Investment < ApplicationRecord
-  belongs_to :campaign, class_name: 'Campaign', inverse_of: :investments, foreign_key: 'campaign_id'
+  belongs_to :campaign, class_name: 'Campaign', inverse_of: :investments
 
-  validates :amount, presence: true
+  validates :amount, :campaign, presence: true
   validate :amount_multiple_check
 
   private
 
   def amount_multiple_check
-    investment_multiple = campaign.investment_multiple
+    investment_multiple = campaign.&investment_multiple
+    return if (investment_multiple.present? && amount % investment_multiple == 0)
 
-    return false unless (amount % investment_multiple == 0)
+    errors.add(:amount, "is not a correct multiple of Investment Multiple!")
   end
 end

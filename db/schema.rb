@@ -39,5 +39,4 @@ ActiveRecord::Schema.define(version: 2022_06_02_205237) do
     t.index ["campaign_id"], name: "index_investments_on_campaign_id"
   end
 
-  add_foreign_key "investments", "campaigns"
 end
