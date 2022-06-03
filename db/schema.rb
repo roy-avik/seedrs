@@ -17,26 +17,31 @@ ActiveRecord::Schema.define(version: 2022_06_02_205237) do
 
   create_table "campaigns", force: :cascade do |t|
     t.string "name", null: false
+    t.string "sector", null: false
     t.float "percentage_raised", default: 0.0, null: false
     t.integer "target_amount", null: false
     t.string "country", null: false
-    t.integer "investment_multiple", null: false
+    t.float "investment_multiple", null: false
+    t.string "currency", default: "GBP", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["country"], name: "index_campaigns_on_country"
+    t.index ["currency"], name: "index_campaigns_on_currency"
     t.index ["name"], name: "index_campaigns_on_name"
     t.index ["percentage_raised"], name: "index_campaigns_on_percentage_raised"
+    t.index ["sector"], name: "index_campaigns_on_sector"
     t.index ["target_amount"], name: "index_campaigns_on_target_amount"
   end
 
   create_table "investments", force: :cascade do |t|
     t.bigint "campaign_id"
     t.float "amount", null: false
+    t.string "currency", default: "GBP", null: false
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["amount"], name: "index_investments_on_amount"
     t.index ["campaign_id"], name: "index_investments_on_campaign_id"
+    t.index ["currency"], name: "index_investments_on_currency"
   end
 
 end

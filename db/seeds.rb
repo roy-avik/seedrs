@@ -4,7 +4,8 @@ puts "#{(1..25).map do |n|
 		name: "Campaign #{n}",
 		percentage_raised: 0,
 		target_amount: target_amount,
-		country: FFaker::Address.country,
-		investment_multiple: target_amount/Random.random_number(99).round,
+		country: 'United Kingdom',
+		investment_multiple: target_amount/10,
+		sector: %w(fintech biotech ai nanotech).sample
   )
 end.size} Campaigns has been created!"

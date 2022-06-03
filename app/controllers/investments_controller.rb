@@ -3,12 +3,12 @@ class InvestmentsController < ApplicationController
   # POST /investments
   def create
     @investment = Investment.new(investment_params)
+    @investment.save!
 
-    if @investment.save
-      render :show, status: :created, location: @investment
-    else
-      render json: @investment.errors, status: :unprocessable_entity
-    end
+    render json: @investment, status: :created
+  rescue StandardError => error
+    puts error
+    render json: error, status: :unprocessable_entity
   end
 
   private
