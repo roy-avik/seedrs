@@ -7,6 +7,7 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 # Install additional packages.
 RUN apt update -qq
 RUN apt install -y postgresql-client nodejs yarn
+RUN apt-get update
 RUN apt-get install -y build-essential
 
 # Prepare working directory.
