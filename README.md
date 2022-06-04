@@ -32,4 +32,4 @@ docker-compose up
 
 * or
 
-simply run the ./start.sh from BASH
+## simply run the `./start.sh` from `BASH`
