@@ -2,6 +2,7 @@
 
 # Seedrs Mini API
 
+* Clone the repository and install ruby
 
 * Ruby version
 ```
