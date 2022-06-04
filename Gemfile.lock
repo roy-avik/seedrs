@@ -229,6 +229,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   shoulda-matchers
   turbolinks (~> 5)
+  tzinfo
   tzinfo-data
   web-console (>= 4.1.0)
 
