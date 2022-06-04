@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Seedrs Mini API
 
-Things you may want to cover:
 
 * Ruby version
+2.7.6
 
 * System dependencies
 
 * Configuration
 
 * Database creation
-
-* Database initialization
+from
+rails db:setup
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+rspec
 
-* Deployment instructions
+* DOCKER COMPOSE
+
 
 * ...
