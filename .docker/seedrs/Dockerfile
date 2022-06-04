@@ -16,12 +16,7 @@ RUN gem install bundler
 RUN gem install ffi -v 1.15.5
 RUN bundle install --path vendor/bundle
 RUN bundle install
-# RUN rails db:setup
 
-# Configure endpoint.
-# COPY ./.docker/seedrs/entrypoint.sh /usr/bin/
-# RUN chmod 777 ./.docker/seedrs/entrypoint.sh
-# ENTRYPOINT ["./.docker/seedrs/entrypoint.sh"]
 EXPOSE 3000
 
 # Start app server.
