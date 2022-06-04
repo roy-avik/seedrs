@@ -1,5 +1,5 @@
 current directory: /mnt/d/seedrs/vendor/bundle/ruby/2.7.0/gems/ffi-1.15.5/ext/ffi_c
-/home/royavik/.rbenv/versions/2.7.6/bin/ruby -I /home/royavik/.rbenv/versions/2.7.6/lib/ruby/2.7.0 -r ./siteconf20220604-3909-1p9ko10.rb extconf.rb
+/home/royavik/.rbenv/versions/2.7.6/bin/ruby -I /home/royavik/.rbenv/versions/2.7.6/lib/ruby/2.7.0 -r ./siteconf20220604-5021-mbkgmg.rb extconf.rb
 checking for ffi.h... yes
 checking for ffi_prep_closure_loc() in -lffi... yes
 checking for ffi_prep_cif_var()... yes
@@ -41,4 +41,4 @@ linking shared-object ffi_c.so
 
 current directory: /mnt/d/seedrs/vendor/bundle/ruby/2.7.0/gems/ffi-1.15.5/ext/ffi_c
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 ffi_c.so ./.gem.20220604-3909-144z30j
+/usr/bin/install -c -m 0755 ffi_c.so ./.gem.20220604-5021-diyzk2

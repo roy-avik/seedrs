@@ -1,5 +1,5 @@
 current directory: /mnt/d/seedrs/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.8/ext/nio4r
-/home/royavik/.rbenv/versions/2.7.6/bin/ruby -I /home/royavik/.rbenv/versions/2.7.6/lib/ruby/2.7.0 -r ./siteconf20220604-3909-151nue.rb extconf.rb
+/home/royavik/.rbenv/versions/2.7.6/bin/ruby -I /home/royavik/.rbenv/versions/2.7.6/lib/ruby/2.7.0 -r ./siteconf20220604-5021-1toi5ai.rb extconf.rb
 checking for unistd.h... yes
 checking for linux/aio_abi.h... yes
 checking for linux/io_uring.h... no
@@ -56,4 +56,4 @@ linking shared-object nio4r_ext.so
 
 current directory: /mnt/d/seedrs/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.8/ext/nio4r
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20220604-3909-1agtu2c
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20220604-5021-1cp389z

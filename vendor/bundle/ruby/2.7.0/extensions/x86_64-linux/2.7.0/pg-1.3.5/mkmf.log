@@ -348,7 +348,7 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I/home/royavik/.rbenv/versions/2.7.6/include/ruby-2.7.0/x86_64-linux -I/home/royavik/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/backward -I/home/royavik/.rbenv/versions/2.7.6/include/ruby-2.7.0 -I. -I/usr/include/postgresql -I/home/royavik/.rbenv/versions/2.7.6/include    -g -O2 -fPIC conftest.c  -L. -L/home/royavik/.rbenv/versions/2.7.6/lib -Wl,-rpath,/home/royavik/.rbenv/versions/2.7.6/lib -L/usr/lib/x86_64-linux-gnu -Wl,-rpath,/usr/lib/x86_64-linux-gnu -L. -L/home/royavik/.rbenv/versions/2.7.6/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic    -lpq  -Wl,-rpath,/home/royavik/.rbenv/versions/2.7.6/lib -L/home/royavik/.rbenv/versions/2.7.6/lib -lruby -lpq  -lm   -lc"
-/tmp/ccboYDfh.o: In function `t':
+/tmp/ccxPC4eC.o: In function `t':
 /mnt/d/seedrs/vendor/bundle/ruby/2.7.0/gems/pg-1.3.5/ext/conftest.c:15: undefined reference to `rb_io_wait'
 collect2: error: ld returned 1 exit status
 checked program was:

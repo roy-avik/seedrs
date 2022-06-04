@@ -67,7 +67,7 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I/home/royavik/.rbenv/versions/2.7.6/include/ruby-2.7.0/x86_64-linux -I/home/royavik/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/backward -I/home/royavik/.rbenv/versions/2.7.6/include/ruby-2.7.0 -I. -I/home/royavik/.rbenv/versions/2.7.6/include    -g -O2 -fPIC conftest.c  -L. -L/home/royavik/.rbenv/versions/2.7.6/lib -Wl,-rpath,/home/royavik/.rbenv/versions/2.7.6/lib -L. -L/home/royavik/.rbenv/versions/2.7.6/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/royavik/.rbenv/versions/2.7.6/lib -L/home/royavik/.rbenv/versions/2.7.6/lib -lruby  -lm   -lc"
-/tmp/cc1asT1X.o: In function `t':
+/tmp/cc4AxIaA.o: In function `t':
 /mnt/d/seedrs/vendor/bundle/ruby/2.7.0/gems/msgpack-1.5.2/ext/msgpack/conftest.c:17: undefined reference to `rb_enc_interned_str'
 collect2: error: ld returned 1 exit status
 checked program was:
