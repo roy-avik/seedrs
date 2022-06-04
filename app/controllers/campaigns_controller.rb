@@ -6,7 +6,7 @@ class CampaignsController < ApplicationController
     @campaigns = Campaign.where(Campaign.sanitize_sql(filter_query), sanitized_value) if params[:field_name].present?
     @campaigns ||= Campaign.order(:id)
 
-    render json: { campaigns: CampaignSerializer.new(@campaigns).serializable_hash }
+    render json: CampaignSerializer.new(@campaigns).serializable_hash
 
   rescue StandardError => error
     puts error
@@ -17,6 +17,8 @@ class CampaignsController < ApplicationController
     @campaign = Campaign.find(params[:id])
 
     render json: CampaignSerializer.new(@campaign).serializable_hash
+  rescue ActiveRecord::RecordNotFound => exception
+    render json: { error: exception }, status: :not_found
   end
 
   private
@@ -29,7 +31,7 @@ class CampaignsController < ApplicationController
     field_name = params.dig(:field_name)
     return unless field_name
 
-    raise StandardError, 'Invalid Field Name! ' unless ALLOWED_ATTRS.map(&:first).include?(field_name)
+    raise StandardError, 'Invalid Field Name!' unless ALLOWED_ATTRS.map(&:first).include?(field_name)
 
     field_name
   end
