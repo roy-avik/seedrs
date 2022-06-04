@@ -1,16 +1,24 @@
-<%= form_with(model: investment) do |form| %>
+<%= form_with(model: @investment, url: campaign_investments_path, method: :post) do |form| %>
   <% if investment.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(investment.errors.count, "error") %> prohibited this investment from being saved:</h2>
+      <h2><%= pluralize(@investment.errors.count, "error") %> prohibited this investment from being saved:</h2>
 
       <ul>
-        <% investment.errors.each do |error| %>
+        <% @investment.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
+  <%= form.label :amount, "Enter amounts in multiple of #{@campaign.investment_multiple} #{@campaign.currency.upcase}" %>
+  <%= form.number_field :amount, value: number_to_currency(form.object.amount.to_f, delimiter: '', unit: ''), step: 0.01 %>
+  <br>
+  <br>
+  <%= form.label :email, "Enter your email address" %>
+  <%= form.text_field :email, placeholder: 'Email' %>
+  <br>
+  <br>
   <div class="actions">
     <%= form.submit %>
   </div>

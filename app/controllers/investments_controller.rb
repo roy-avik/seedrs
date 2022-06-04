@@ -1,8 +1,13 @@
 class InvestmentsController < ApplicationController
 
+  def new
+    @campaign = Campaign.find(params[:campaign_id])
+    @investment = Investment.new
+  end
+
   # POST /investments
   def create
-    @investment = Investment.new(investment_params)
+    @investment = Investment.new(investment_params.merge(campaign_id: params[:campaign_id]))
     @investment.save!
 
     render json: @investment, status: :created
@@ -15,6 +20,6 @@ class InvestmentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def investment_params
-      params.require(:investment).permit(:amount, :email, :campaign_id)
+      params.require(:investment).permit(:amount, :email)
     end
 end

@@ -11,8 +11,7 @@ RSpec.describe InvestmentsController, type: :request do
       let(:params) do
         {
           investment: {
-            # amount: 49.7,
-            amount: 9.9399991,
+            amount: 9.94,
             campaign_id: campaign.id,
           }
         }
@@ -44,7 +43,8 @@ RSpec.describe InvestmentsController, type: :request do
     context 'with invalid campaign' do
 
       let(:error_message) do
-        "Validation failed: Campaign must exist, Campaign can't be blank, Amount is not a correct multiple of Investment Multiple!"
+        "Validation failed: Campaign must exist, Campaign can't be blank, " \
+        "Amount is not a correct multiple of Investment Multiple!, Currency does not match with Campaign's currency!"
       end
 
       it 'throws exception' do
