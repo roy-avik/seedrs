@@ -17,6 +17,7 @@ RUN gem install bundler
 RUN gem install ffi -v 1.15.5
 RUN bundle install --path vendor/bundle
 RUN bundle install
+RUN bundle exec rails db:setup
 
 EXPOSE 3000
 
